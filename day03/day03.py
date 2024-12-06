@@ -1,11 +1,5 @@
 import re
 
-
-with open('day03/input.in', 'r') as f:
-    lines = "".join([line.strip() for line in f.readlines()])
-    f.close()
-
-
 def interpret(line: str) -> int:
     nrs = re.findall(r'\d+', line)
     nrs = [int(x) for x in nrs]
@@ -32,5 +26,10 @@ def part2() -> int:
 
 
 if __name__ == "__main__":
+    with open('day03/input.in', 'r') as f:
+        lines = "".join([line.strip() for line in f.readlines()])
+        f.close()
+
+
     print(part1())
     print(part2())   

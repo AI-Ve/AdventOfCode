@@ -1,12 +1,5 @@
 from typing import List
 
-
-with open('day02/input.in', 'r') as f:
-    lines = [l.split() for l in f.readlines()]  
-    lines = [[int(x) for x in l] for l in lines]
-    f.close()
-
-
 def check_valid(line: List[int]) -> bool:
     direction = -1 if line[0] - line[1] < 0 else 1 if line[0] - line[1] else 0
 
@@ -45,5 +38,10 @@ def part2() -> int:
     
 
 if __name__ == "__main__":
+    with open('day02/input.in', 'r') as f:
+        lines = [l.split() for l in f.readlines()]  
+        lines = [[int(x) for x in l] for l in lines]
+        f.close()
+
     print(part1())
     print(part2())   

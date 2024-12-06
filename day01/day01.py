@@ -1,9 +1,6 @@
-with open('day01/input.in', 'r') as f:
-    lines = [l.split() for l in f.readlines()]
-    f.close()
+from typing import List
 
-
-def part1() -> int:
+def part1(lines: List[List[str]]) -> int:
     l1, l2 = [], []
     for line in lines:
         line = list(map(int, line))
@@ -16,7 +13,7 @@ def part1() -> int:
     return sum([abs(i - j) for i, j in zip(l1, l2)])
 
 
-def part2() -> int:
+def part2(lines: List[List[str]]) -> int:
     l1, l2 = [], []
     for line in lines:
         line = list(map(int, line))
@@ -31,5 +28,8 @@ def part2() -> int:
 
 
 if __name__ == "__main__":
-    print(part1())
-    print(part2())
+    with open('day01/input.in', 'r') as f:
+        lines = [l.split() for l in f.readlines()]
+        f.close()
+    print(part1(lines))
+    print(part2(lines))

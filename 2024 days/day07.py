@@ -47,10 +47,10 @@ def part2(lines: List[List[str]]) -> int:
 
 
 if __name__ == "__main__":
-    with open('day07/input.in', 'r') as f:
+    with open('inputs/in07.txt', 'r') as f:
         lines = [l.strip().split(':') for l in f.readlines()]
         f.close()
     
-    print(f"Day 07 answers: ")
+    print(f"Day 07:")
     print(part1(lines))
     print(part2(lines))

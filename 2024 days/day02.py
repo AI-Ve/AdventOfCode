@@ -38,10 +38,11 @@ def part2() -> int:
     
 
 if __name__ == "__main__":
-    with open('day02/input.in', 'r') as f:
+    with open('inputs/in02.txt', 'r') as f:
         lines = [l.split() for l in f.readlines()]  
         lines = [[int(x) for x in l] for l in lines]
         f.close()
 
+    print("Day02: ")
     print(part1())
     print(part2())   

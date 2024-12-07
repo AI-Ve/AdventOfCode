@@ -28,8 +28,10 @@ def part2(lines: List[List[str]]) -> int:
 
 
 if __name__ == "__main__":
-    with open('day01/input.in', 'r') as f:
+    with open('inputs/in01.txt', 'r') as f:
         lines = [l.split() for l in f.readlines()]
         f.close()
+
+    print("Day 01:")
     print(part1(lines))
     print(part2(lines))

@@ -26,10 +26,10 @@ def part2() -> int:
 
 
 if __name__ == "__main__":
-    with open('day03/input.in', 'r') as f:
+    with open('inputs/in03.txt', 'r') as f:
         lines = "".join([line.strip() for line in f.readlines()])
         f.close()
 
-
+    print("Day 03: " )
     print(part1())
     print(part2())   

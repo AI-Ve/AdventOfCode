@@ -1,5 +1,6 @@
 from typing import List
 
+
 def check_valid(line: List[int]) -> bool:
     direction = -1 if line[0] - line[1] < 0 else 1 if line[0] - line[1] else 0
 
@@ -10,7 +11,8 @@ def check_valid(line: List[int]) -> bool:
             return False
     return True
 
-def part1() -> int:
+
+def part1(lines: List[List[int]]) -> int:
     ans = 0
 
     for line in lines:
@@ -20,7 +22,7 @@ def part1() -> int:
     return ans
 
 
-def part2() -> int:
+def part2(lines: List[List[int]]) -> int:
     ans = 0
 
     for line in lines:
@@ -32,17 +34,16 @@ def part2() -> int:
                 if check_valid(new_line):
                     ans += 1
                     break 
-    
     return ans
     
     
-
 if __name__ == "__main__":
-    with open('inputs/in02.txt', 'r') as f:
+    with open('../inputs/in02.txt', 'r') as f:
         lines = [l.split() for l in f.readlines()]  
         lines = [[int(x) for x in l] for l in lines]
         f.close()
 
+
     print("Day02: ")
-    print(part1())
-    print(part2())   
+    print(part1(lines))
+    print(part2(lines))   

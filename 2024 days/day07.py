@@ -47,7 +47,7 @@ def part2(lines: List[List[str]]) -> int:
 
 
 if __name__ == "__main__":
-    with open('inputs/in07.txt', 'r') as f:
+    with open('../inputs/in07.txt', 'r') as f:
         lines = [l.strip().split(':') for l in f.readlines()]
         f.close()
     

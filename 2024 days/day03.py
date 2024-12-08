@@ -26,7 +26,7 @@ def part2() -> int:
 
 
 if __name__ == "__main__":
-    with open('../inputs/in03.txt', 'r') as f:
+    with open('inputs/in03.txt', 'r') as f:
         lines = "".join([line.strip() for line in f.readlines()])
         f.close()
 

@@ -38,7 +38,7 @@ def part2(lines: List[List[int]]) -> int:
     
     
 if __name__ == "__main__":
-    with open('../inputs/in02.txt', 'r') as f:
+    with open('inputs/in02.txt', 'r') as f:
         lines = [l.split() for l in f.readlines()]  
         lines = [[int(x) for x in l] for l in lines]
         f.close()

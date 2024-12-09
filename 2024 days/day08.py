@@ -27,8 +27,6 @@ def part1(lines: List[List[str]]) -> int:
             if lines[i][j] != '.':
                 antenas[lines[i][j]].append((i, j))
 
-    antenas_loc = [a for v in antenas.values() for a in v]
-
     for v in antenas.values():
         for pair in (permutations(v, 2)):
             nodes.append(mirror_point(pair[0], pair[1]))
@@ -50,8 +48,6 @@ def part2(lines: List[List[str]]) -> int:
         for j in range(_COLS):
             if lines[i][j] != '.':
                 antenas[lines[i][j]].append((i, j))
-
-    antenas_loc = [a for v in antenas.values() for a in v]
 
     for v in antenas.values():
         for pair in (permutations(v, 2)):
